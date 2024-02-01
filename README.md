@@ -193,3 +193,34 @@ CREATE TABLE december (
 	member_casual VARCHAR(20)
 );
 ```
+### Combine rate new table with all datesets called 'allmonths.'
+``` sql
+CREATE TABLE allmonths AS 
+SELECT * FROM (
+SELECT rideable_type, started_at, ended_at, member_casual FROM january
+UNION ALL
+SELECT rideable_type, started_at, ended_at, member_casual FROM february
+UNION ALL
+SELECT rideable_type, started_at, ended_at, member_casual FROM march
+UNION ALL
+SELECT rideable_type, started_at, ended_at, member_casual FROM april
+UNION ALL
+SELECT rideable_type, started_at, ended_at, member_casual FROM may
+UNION ALL
+SELECT rideable_type, started_at, ended_at, member_casual FROM june
+UNION ALL
+SELECT rideable_type, started_at, ended_at, member_casual FROM july
+UNION ALL
+SELECT rideable_type, started_at, ended_at, member_casual FROM august
+UNION ALL
+SELECT rideable_type, started_at, ended_at, member_casual FROM september
+UNION ALL
+SELECT rideable_type, started_at, ended_at, member_casual FROM october
+UNION ALL
+SELECT rideable_type, started_at, ended_at, member_casual FROM november
+UNION ALL
+SELECT rideable_type, started_at, ended_at, member_casual FROM december
+);
+
+SELECT * FROM allmonths
+```
