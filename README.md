@@ -17,7 +17,7 @@ In my capacity as the data analyst within the team, I have been assigned the res
 - I also created primary keys in all twelve dataset for the ease of joins in sql, and data modeling in power BI for visualization.
 
 ### Dataset importation into postgresql
-### - first you have to create tables.
+#### - first you have to create tables.
 ``` sql
 CREATE DATABASE cyclistic;
 
