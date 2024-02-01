@@ -16,7 +16,8 @@ In my capacity as the data analyst within the team, I have been assigned the res
 - In the process of data preparation, I employed Microsoft Excel to eliminate columns containing latitude, longitude, and station information, as they were deemed irrelevant to my analysis. Additionally, the station column contained null values, prompting its exclusion from the dataset.
 - I also created primary keys in all twelve dataset for the ease of joins in sql, and data modeling in power BI for visualization.
 
-### Dataset importation into postgresql; first you have to create tables.
+### Dataset importation into postgresql
+### - first you have to create tables.
 ``` sql
 CREATE DATABASE cyclistic;
 
