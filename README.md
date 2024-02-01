@@ -13,9 +13,10 @@ In my capacity as the data analyst within the team, I have been assigned the res
 ![image](https://github.com/UgoDaves/Cyclistics-Case-study-with-SQL/assets/152723434/453bea36-77ae-4322-a098-cae31b18970a)
 
 ## Process Phase
-- Documentation of any cleaning or manipulation of Data: I used, excel, power query, Postgresql, and Microsoft Power BI.
-I used microsoft Exce to remove columns consisting of the latitude, longitude and station, since they are not necessarily relivant for my analysis. Also, the station columns consists of nulls
+- In the process of data preparation, I employed Microsoft Excel to eliminate columns containing latitude, longitude, and station information, as they were deemed irrelevant to my analysis. Additionally, the station column contained null values, prompting its exclusion from the dataset.
+- I also created primary keys in all twelve dataset for the ease of joins in sql, and data modeling in power BI for visualization.
 
+### Dataset importation into postgresql; first you have to create tables.
 ``` sql
 CREATE DATABASE cyclistic;
 
@@ -98,6 +99,94 @@ CREATE TABLE july (
 	may_ride_id TEXT REFERENCES may(may_ride_id),
 	june_ride_id TEXT REFERENCES june(june_ride_id),
 	july_ride_id TEXT PRIMARY KEY,
+	rideable_type VARCHAR(15),
+	started_at DATE,
+	ended_at DATE,
+	member_casual VARCHAR(20)
+);
+
+CREATE TABLE august (
+	feb_ride_id TEXT REFERENCES february (feb_ride_id),
+	jan_ride_id INT REFERENCES january(jan_ride_id),
+	march_ride_id TEXT REFERENCES march(march_ride_id),
+	april_ride_id TEXT REFERENCES april(april_ride_id),
+	may_ride_id TEXT REFERENCES may(may_ride_id),
+	june_ride_id TEXT REFERENCES june(june_ride_id),
+	july_ride_id TEXT REFERENCES july(july_ride_id),
+	aug_ride_id TEXT PRIMARY KEY,
+	rideable_type VARCHAR(15),
+	started_at DATE,
+	ended_at DATE,
+	member_casual VARCHAR(20)
+);
+
+CREATE TABLE september (
+	feb_ride_id TEXT REFERENCES february (feb_ride_id),
+	jan_ride_id INT REFERENCES january(jan_ride_id),
+	march_ride_id TEXT REFERENCES march(march_ride_id),
+	april_ride_id TEXT REFERENCES april(april_ride_id),
+	may_ride_id TEXT REFERENCES may(may_ride_id),
+	june_ride_id TEXT REFERENCES june(june_ride_id),
+	july_ride_id TEXT REFERENCES july(july_ride_id),
+	aug_ride_id TEXT REFERENCES august(aug_ride_id),
+	sep_ride_id TEXT PRIMARY KEY,
+	rideable_type VARCHAR(15),
+	started_at DATE,
+	ended_at DATE,
+	member_casual VARCHAR(20)
+);
+
+CREATE TABLE october (
+	feb_ride_id TEXT REFERENCES february (feb_ride_id),
+	jan_ride_id INT REFERENCES january(jan_ride_id),
+	march_ride_id TEXT REFERENCES march(march_ride_id),
+	april_ride_id TEXT REFERENCES april(april_ride_id),
+	may_ride_id TEXT REFERENCES may(may_ride_id),
+	june_ride_id TEXT REFERENCES june(june_ride_id),
+	july_ride_id TEXT REFERENCES july(july_ride_id),
+	aug_ride_id TEXT REFERENCES august(aug_ride_id),
+	sep_ride_id TEXT REFERENCES september(sep_ride_id),
+	october_ride_id TEXT PRIMARY KEY,
+	rideable_type VARCHAR(15),
+	started_at DATE,
+	ended_at DATE,
+	member_casual VARCHAR(20)
+);
+
+CREATE TABLE november (
+	feb_ride_id TEXT REFERENCES february (feb_ride_id),
+	jan_ride_id INT REFERENCES january(jan_ride_id),
+	march_ride_id TEXT REFERENCES march(march_ride_id),
+	april_ride_id TEXT REFERENCES april(april_ride_id),
+	may_ride_id TEXT REFERENCES may(may_ride_id),
+	june_ride_id TEXT REFERENCES june(june_ride_id),
+	july_ride_id TEXT REFERENCES july(july_ride_id),
+	aug_ride_id TEXT REFERENCES august(aug_ride_id),
+	sep_ride_id TEXT REFERENCES september(sep_ride_id),
+	october_ride_id TEXT REFERENCES october(oct_ride_id),
+	nov_ride_id TEXT PRIMARY KEY,
+	rideable_type VARCHAR(15),
+	started_at DATE,
+	ended_at DATE,
+	member_casual VARCHAR(20)
+);
+
+ALTER TABLE october
+RENAME COLUMN october_ride_id TO oct_ride_id
+
+CREATE TABLE december (
+	feb_ride_id TEXT REFERENCES february (feb_ride_id),
+	jan_ride_id INT REFERENCES january(jan_ride_id),
+	march_ride_id TEXT REFERENCES march(march_ride_id),
+	april_ride_id TEXT REFERENCES april(april_ride_id),
+	may_ride_id TEXT REFERENCES may(may_ride_id),
+	june_ride_id TEXT REFERENCES june(june_ride_id),
+	july_ride_id TEXT REFERENCES july(july_ride_id),
+	aug_ride_id TEXT REFERENCES august(aug_ride_id),
+	sep_ride_id TEXT REFERENCES september(sep_ride_id),
+	october_ride_id TEXT REFERENCES october(oct_ride_id),
+	nov_ride_id TEXT REFERENCES november(nov_ride_id),
+	dec_ride_id TEXT PRIMARY KEY,
 	rideable_type VARCHAR(15),
 	started_at DATE,
 	ended_at DATE,
