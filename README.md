@@ -21,18 +21,10 @@ In my capacity as the data analyst within the team, I have been assigned the res
 CREATE DATABASE cyclistic;
 
 CREATE TABLE january (
-	jan_ride_id	INT PRIMARY KEY,
+	jan_ride_id INT PRIMARY KEY,
 	rideable_type VARCHAR(15),
-	started_at DATE,
-	ended_at DATE,
-	member_casual VARCHAR(10)
-);
-
-CREATE TABLE january (
-	jan_ride_id	INT PRIMARY KEY,
-	rideable_type VARCHAR(15),
-	started_at DATE,
-	ended_at DATE,
+	started_at TIMESTAMP,
+	ended_at TIMESTAMP,
 	member_casual VARCHAR(10)
 );
 
@@ -40,8 +32,8 @@ CREATE TABLE february (
 	feb_ride_id TEXT PRIMARY KEY,
 	jan_ride_id INT REFERENCES january(jan_ride_id),
 	rideable_type VARCHAR(15),
-	started_at DATE,
-	ended_at DATE,
+	started_at TIMESTAMP,
+	ended_at TIMESTAMP,
 	member_casual VARCHAR(20)
 );
 
@@ -50,8 +42,8 @@ CREATE TABLE march (
 	jan_ride_id INT REFERENCES january(jan_ride_id),
 	march_ride_id TEXT PRIMARY KEY,
 	rideable_type VARCHAR(15),
-	started_at DATE,
-	ended_at DATE,
+	started_at TIMESTAMP,
+	ended_at TIMESTAMP,
 	member_casual VARCHAR(20)
 );
 
@@ -61,8 +53,8 @@ CREATE TABLE april (
 	march_ride_id TEXT REFERENCES march(march_ride_id),
 	april_ride_id TEXT PRIMARY KEY,
 	rideable_type VARCHAR(15),
-	started_at DATE,
-	ended_at DATE,
+	started_at TIMESTAMP,
+	ended_at TIMESTAMP,
 	member_casual VARCHAR(20)
 );
 
@@ -73,8 +65,8 @@ CREATE TABLE may (
 	april_ride_id TEXT REFERENCES april(april_ride_id),
 	may_ride_id TEXT PRIMARY KEY,
 	rideable_type VARCHAR(15),
-	started_at DATE,
-	ended_at DATE,
+	started_at TIMESTAMP,
+	ended_at TIMESTAMP,
 	member_casual VARCHAR(20)
 );
 
@@ -86,8 +78,8 @@ CREATE TABLE june (
 	may_ride_id TEXT REFERENCES may(may_ride_id),
 	june_ride_id TEXT PRIMARY KEY,
 	rideable_type VARCHAR(15),
-	started_at DATE,
-	ended_at DATE,
+	started_at TIMESTAMP,
+	ended_at TIMESTAMP,
 	member_casual VARCHAR(20)
 );
 
@@ -100,8 +92,8 @@ CREATE TABLE july (
 	june_ride_id TEXT REFERENCES june(june_ride_id),
 	july_ride_id TEXT PRIMARY KEY,
 	rideable_type VARCHAR(15),
-	started_at DATE,
-	ended_at DATE,
+	started_at TIMESTAMP,
+	ended_at TIMESTAMP,
 	member_casual VARCHAR(20)
 );
 
@@ -115,8 +107,8 @@ CREATE TABLE august (
 	july_ride_id TEXT REFERENCES july(july_ride_id),
 	aug_ride_id TEXT PRIMARY KEY,
 	rideable_type VARCHAR(15),
-	started_at DATE,
-	ended_at DATE,
+	started_at TIMESTAMP,
+	ended_at TIMESTAMP,
 	member_casual VARCHAR(20)
 );
 
@@ -131,8 +123,8 @@ CREATE TABLE september (
 	aug_ride_id TEXT REFERENCES august(aug_ride_id),
 	sep_ride_id TEXT PRIMARY KEY,
 	rideable_type VARCHAR(15),
-	started_at DATE,
-	ended_at DATE,
+	started_at TIMESTAMP,
+	ended_at TIMESTAMP,
 	member_casual VARCHAR(20)
 );
 
@@ -148,8 +140,8 @@ CREATE TABLE october (
 	sep_ride_id TEXT REFERENCES september(sep_ride_id),
 	october_ride_id TEXT PRIMARY KEY,
 	rideable_type VARCHAR(15),
-	started_at DATE,
-	ended_at DATE,
+	started_at TIMESTAMP,
+	ended_at TIMESTAMP,
 	member_casual VARCHAR(20)
 );
 
@@ -166,8 +158,8 @@ CREATE TABLE november (
 	october_ride_id TEXT REFERENCES october(oct_ride_id),
 	nov_ride_id TEXT PRIMARY KEY,
 	rideable_type VARCHAR(15),
-	started_at DATE,
-	ended_at DATE,
+	started_at TIMESTAMP,
+	ended_at TIMESTAMP,
 	member_casual VARCHAR(20)
 );
 
@@ -188,8 +180,8 @@ CREATE TABLE december (
 	nov_ride_id TEXT REFERENCES november(nov_ride_id),
 	dec_ride_id TEXT PRIMARY KEY,
 	rideable_type VARCHAR(15),
-	started_at DATE,
-	ended_at DATE,
+	started_at TIMESTAMP,
+	ended_at TIMESTAMP,
 	member_casual VARCHAR(20)
 );
 ```
