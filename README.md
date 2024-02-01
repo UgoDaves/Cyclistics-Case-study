@@ -9,6 +9,8 @@ In my capacity as the data analyst within the team, I have been assigned the res
 ## Prepare Phase
 
 ## Process Phase
+Documentation of any cleaning or manipulation of Data:
+
 ``` sql
 CREATE DATABASE cyclistic;
 
