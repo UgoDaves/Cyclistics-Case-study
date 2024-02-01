@@ -9,11 +9,12 @@ In my capacity as the data analyst within the team, I have been assigned the res
 ## Prepare Phase
 - Discription of all data used:
   Here is a [link](https://divvy-tripdata.s3.amazonaws.com/index.html) to the dataset. You can also access its license [here](https://divvybikes.com/data-license-agreement).
-  This is a publick dataset consisting of therteen columns (ride_id, rideable_type, started_at, ended_at, start_station_name, start_station_id, end_station_name, end_station_id, start_lat	start_lng, end_lat, end_lng, member_casual)
+  This is an original public dataset, updated monthly consisting of therteen columns (ride_id, rideable_type, started_at, ended_at, start_station_name, start_station_id, end_station_name, end_station_id, start_lat	start_lng, end_lat, end_lng, member_casual)
 ![image](https://github.com/UgoDaves/Cyclistics-Case-study-with-SQL/assets/152723434/453bea36-77ae-4322-a098-cae31b18970a)
 
 ## Process Phase
-Documentation of any cleaning or manipulation of Data:
+- Documentation of any cleaning or manipulation of Data: I used, excel, power query, Postgresql, and Microsoft Power BI.
+I used microsoft Exce to remove columns consisting of the latitude, longitude and station, since they are not necessarily relivant for my analysis. Also, the station columns consists of nulls
 
 ``` sql
 CREATE DATABASE cyclistic;
