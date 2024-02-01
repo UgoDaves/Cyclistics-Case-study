@@ -193,7 +193,7 @@ CREATE TABLE december (
 	member_casual VARCHAR(20)
 );
 ```
-### Combine rate new table with all datesets called 'allmonths.'
+### Combine and create new table with all datesets called 'allmonths.'
 ``` sql
 CREATE TABLE allmonths AS 
 SELECT * FROM (
