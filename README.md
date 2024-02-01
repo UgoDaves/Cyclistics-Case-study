@@ -223,4 +223,5 @@ SELECT rideable_type, started_at, ended_at, member_casual FROM december
 );
 
 SELECT * FROM allmonths
+-- A total off 5719877
 ```
