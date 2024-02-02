@@ -17,7 +17,7 @@ In my capacity as the data analyst within the team, I have been assigned the res
 - I also created primary keys in all twelve dataset for the ease of joins in sql, and data modeling in power BI for visualization.
 
 ### Dataset importation into postgresql
-#### - first you have to create tables of coresponding dataset files.
+#### - first I created tables of coresponding dataset files, in order to import into postgresql.
 ``` sql
 CREATE DATABASE cyclistic;
 
@@ -186,7 +186,7 @@ CREATE TABLE december (
 	member_casual VARCHAR(20)
 );
 ```
-### Combine and create new table with all datesets called 'allmonths.'
+### I Combined and create new tables with all datesets called 'allmonths.'
 ``` sql
 CREATE TABLE allmonths AS 
 SELECT * FROM (
@@ -218,7 +218,7 @@ SELECT rideable_type, started_at, ended_at, member_casual FROM december
 SELECT * FROM allmonths
 -- A total off 5719877
 ```
-### Create columns: ride_length and seasons
+### I Created new columns: ride_length and seasons
 ``` sql
 SELECT
 member_casual,
@@ -234,3 +234,7 @@ case
 END AS seasons
 FROM allmonths;
 ```
+### Lastly, I imported the Cyclistic database into PowerQuery & PowerBi for analysis
+
+
+## Analyze Phase
