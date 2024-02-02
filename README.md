@@ -250,3 +250,24 @@ FROM allmonths
 
 
 ## Analyze Phase
+During the analysis phase, I identified instances in the "ride_length" column where entries exceeded the 24-hour threshold, which represents the maximum duration for bike usage in a single day. To address this, I removed rows containing ride lengths exceeding the 24-hour mark. Additionally, I converted the "ride_length" values into minutes to facilitate a more straightforward analysis.
+```sql
+-- Removed rows above the 24hr mark
+CREATE TABLE allmonths2 AS
+SELECT * FROM(
+SELECT *
+FROM allmonths1
+WHERE ride_length < '1 day'
+ORDER BY ride_length Desc
+);
+
+-- Created a column for ride lenght in minutes 'time_in_min'
+SELECT 
+member_casual,
+rideable_type,
+DATE(started_at),
+ride_length,
+EXTRACT(hour from ride_length)*60 + extract(minute from ride_length) AS time_in_min
+FROM allmonths2
+ORDER BY 5 DESC;
+```
