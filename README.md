@@ -218,3 +218,19 @@ SELECT rideable_type, started_at, ended_at, member_casual FROM december
 SELECT * FROM allmonths
 -- A total off 5719877
 ```
+### Create columns: ride_length and seasons
+``` sql
+SELECT
+member_casual,
+rideable_type,
+DATE(started_at),
+DATE(ended_at),
+ended_at - started_at AS ride_lenght,
+case
+	WHEN started_at BETWEEN '2023-03-19' AND '2023-06-22' THEN 'spring'
+	WHEN started_at BETWEEN '2023-06-20' AND '2023-09-24' THEN 'summer'
+	WHEN started_at BETWEEN '2023-09-22' AND '2023-12-22' THEN 'fall'
+	ELSE 'winter'
+END AS seasons
+FROM allmonths;
+```
