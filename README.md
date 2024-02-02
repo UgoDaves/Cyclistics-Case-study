@@ -218,21 +218,33 @@ SELECT rideable_type, started_at, ended_at, member_casual FROM december
 SELECT * FROM allmonths
 -- A total off 5719877
 ```
-### I Created new columns: ride_length and seasons
+### I Created new table with columns: day_of_week, ride_length and seasons
 ``` sql
+CREATE TABLE allmonths1 AS
+SELECT * FROM (
 SELECT
 member_casual,
 rideable_type,
-DATE(started_at),
-DATE(ended_at),
+started_at,
+ended_at,
 ended_at - started_at AS ride_lenght,
+CASE
+	WHEN EXTRACT(dow from started_at) = 0 THEN 1
+	WHEN EXTRACT(dow from started_at) = 1 THEN 2
+	WHEN EXTRACT(dow from started_at) = 2 THEN 3
+	WHEN EXTRACT(dow from started_at) = 3 THEN 4
+	WHEN EXTRACT(dow from started_at) = 4 THEN 5
+	WHEN EXTRACT(dow from started_at) = 5 THEN 6
+	ELSE 7
+END AS day_of_week,
 case
-	WHEN started_at BETWEEN '2023-03-19' AND '2023-06-22' THEN 'spring'
+	WHEN started_at BETWEEN '2023-03-19' AND '2023-06-21' THEN 'spring'
 	WHEN started_at BETWEEN '2023-06-20' AND '2023-09-24' THEN 'summer'
-	WHEN started_at BETWEEN '2023-09-22' AND '2023-12-22' THEN 'fall'
+	WHEN started_at BETWEEN '2023-09-23' AND '2023-12-22' THEN 'fall'
 	ELSE 'winter'
 END AS seasons
-FROM allmonths;
+FROM allmonths
+);
 ```
 ### Lastly, I imported the Cyclistic database into PowerQuery & PowerBi for analysis
 
