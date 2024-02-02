@@ -271,4 +271,4 @@ EXTRACT(hour from ride_length)*60 + extract(minute from ride_length) AS time_in_
 FROM allmonths2
 ORDER BY 5 DESC;
 ```
-- Upon analyzing the 'time_in_min' column in Power Query, I observed instances where the values were negative, indicating inconsistencies in the associated 'started' and 'ended' columns. Consequently, I opted to remove these discrepancies by deleting the corresponding rows
+- Upon analyzing the 'time_in_min' column in Power Query, I observed instances where the values were negative, indicating inconsistencies in the associated 'started' and 'ended' columns. Consequently, I opted to remove these discrepancies by deleting the corresponding rows. I also deleted rows with a zero value.
