@@ -283,7 +283,6 @@ ORDER BY 5 DESC;
   
   <img width="546" alt="dow" src="https://github.com/UgoDaves/Cyclistics-Case-study-with-SQL/assets/152723434/a4a71e0d-7a0d-432a-a923-c88b75bed63a">
 
-
 - Bike rides by month, according to users
   
 <img width="479" alt="months" src="https://github.com/UgoDaves/Cyclistics-Case-study-with-SQL/assets/152723434/c6eb00e6-dbd4-482a-bc6f-2e3b9435faa1">
@@ -296,3 +295,5 @@ ORDER BY 5 DESC;
 #### Summary of Analysis
 - The total count of Cyclistic bike users significantly surpasses the number of casual users by more than 1.5 million, as depicted in the stacked bar chart. Notably, the chart reveals a seasonal trend, with the highest ride count occurring during the summer, closely followed by the spring season. Conversely, the winter season exhibits the lowest ride count among the observed periods.
 - There seems to be a corelation between the number of rides and seasons.
+- During the week days, casual members tend to ride bikes specifically on Fridays, saturdays and Sundays. With saturday being the highest. While members tend to ride more on weekdays, with thursdays being the highest.
+- 
