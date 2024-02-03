@@ -274,5 +274,5 @@ ORDER BY 5 DESC;
 - Upon analyzing the 'time_in_min' column in Power Query, I observed instances where the values were negative, indicating inconsistencies in the associated 'started' and 'ended' columns. Consequently, I opted to remove these discrepancies by deleting the corresponding rows. I also deleted rows with a zero value.
 
 ### The total number of members who use Cyclistic bikes outweight the number of casual users by over 1.5 million and ass seen from the stacked barchart, the highest number of rides can be found in the summer, follwed by spring. the least amount of rides are in the winter
-<img width="255" alt="totalnumberofrides" src="https://github.com/UgoDaves/Cyclistics-Case-study-with-SQL/assets/152723434/8686f25b-e062-49b1-91ec-580fa72ff3c5">
-<img width="261" alt="ridesbyseason" src="https://github.com/UgoDaves/Cyclistics-Case-study-with-SQL/assets/152723434/0a827905-82ad-4316-af23-763cc05224e6">
+<img width="380" alt="num of rides" src="https://github.com/UgoDaves/Cyclistics-Case-study-with-SQL/assets/152723434/fca98ea9-8755-404a-bc77-3770f21afd4d">
+
