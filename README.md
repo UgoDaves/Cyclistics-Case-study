@@ -287,6 +287,8 @@ ORDER BY 5 DESC;
   
 <img width="479" alt="months" src="https://github.com/UgoDaves/Cyclistics-Case-study-with-SQL/assets/152723434/c6eb00e6-dbd4-482a-bc6f-2e3b9435faa1">
 
+- Bike usage according to bike type, and average ride time.
+<img width="1022" alt="biketypes" src="https://github.com/UgoDaves/Cyclistics-Case-study-with-SQL/assets/152723434/37dc0096-287e-4564-9e4e-a0d099dce7b6">
 
 
 ## Act
