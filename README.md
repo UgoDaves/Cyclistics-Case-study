@@ -273,10 +273,26 @@ ORDER BY 5 DESC;
 ```
 - Upon analyzing the 'time_in_min' column in Power Query, I observed instances where the values were negative, indicating inconsistencies in the associated 'started' and 'ended' columns. Consequently, I opted to remove these discrepancies by deleting the corresponding rows. I also deleted rows with a zero value.
 
-- The total count of Cyclistic bike users significantly surpasses the number of casual users by more than 1.5 million, as depicted in the stacked bar chart. Notably, the chart reveals a seasonal trend, with the highest ride count occurring during the summer, closely followed by the spring season. Conversely, the winter season exhibits the lowest ride count among the observed periods.
+- Count of riders
 <img width="550" alt="num of rides" src="https://github.com/UgoDaves/Cyclistics-Case-study-with-SQL/assets/152723434/eb48dc24-e27a-4822-87c3-673db6dd83c0"> <img width="550" alt="ride by season" src="https://github.com/UgoDaves/Cyclistics-Case-study-with-SQL/assets/152723434/a88aab03-401f-4721-be0d-1cc871d2b8ef">
 
 - Correlation between seasons and the number of rides
 <img width="644" alt="scatterplot" src="https://github.com/UgoDaves/Cyclistics-Case-study-with-SQL/assets/152723434/0f9b6ef0-4ffa-45bb-b911-f7ca1d026fc9">
 
+- Bike usage by days of the week, acording to users
+  
+  <img width="546" alt="dow" src="https://github.com/UgoDaves/Cyclistics-Case-study-with-SQL/assets/152723434/a4a71e0d-7a0d-432a-a923-c88b75bed63a">
 
+
+- Bike rides by month, according to users
+  
+<img width="479" alt="months" src="https://github.com/UgoDaves/Cyclistics-Case-study-with-SQL/assets/152723434/c6eb00e6-dbd4-482a-bc6f-2e3b9435faa1">
+
+
+
+## Act
+### Fingings
+
+#### Summary of Analysis
+- The total count of Cyclistic bike users significantly surpasses the number of casual users by more than 1.5 million, as depicted in the stacked bar chart. Notably, the chart reveals a seasonal trend, with the highest ride count occurring during the summer, closely followed by the spring season. Conversely, the winter season exhibits the lowest ride count among the observed periods.
+- There seems to be a corelation between the number of rides and seasons.
