@@ -279,19 +279,23 @@ ORDER BY 5 DESC;
 - Correlation between seasons and the number of rides
 <img width="644" alt="scatterplot" src="https://github.com/UgoDaves/Cyclistics-Case-study-with-SQL/assets/152723434/0f9b6ef0-4ffa-45bb-b911-f7ca1d026fc9">
 
+
 - Bike usage by days of the week, acording to users
   
   <img width="546" alt="dow" src="https://github.com/UgoDaves/Cyclistics-Case-study-with-SQL/assets/152723434/a4a71e0d-7a0d-432a-a923-c88b75bed63a">
+  
 
 - Bike rides by month, according to users
   
 <img width="479" alt="months" src="https://github.com/UgoDaves/Cyclistics-Case-study-with-SQL/assets/152723434/c6eb00e6-dbd4-482a-bc6f-2e3b9435faa1">
 
+
 - Bike usage according to bike type, and average ride time.
 <img width="1022" alt="biketypes" src="https://github.com/UgoDaves/Cyclistics-Case-study-with-SQL/assets/152723434/37dc0096-287e-4564-9e4e-a0d099dce7b6">
 
-- Average number of rides by riders and types of bikes used.
-<img width="1022" alt="average" src="https://github.com/UgoDaves/Cyclistics-Case-study-with-SQL/assets/152723434/6b90405c-d5ba-4f49-b11c-4800a94f6310">
+- Total and average number of rides by riders and types of bikes used.
+<img width="1022" alt="average" src="https://github.com/UgoDaves/Cyclistics-Case-study-with-SQL/assets/152723434/4251bfb1-9048-4575-a40a-cf53d04191a7">
+
 
 
 
@@ -299,7 +303,14 @@ ORDER BY 5 DESC;
 ### Fingings
 
 #### Summary of Analysis
-- The total count of Cyclistic bike users significantly surpasses the number of casual users by more than 1.5 million, as depicted in the stacked bar chart. Notably, the chart reveals a seasonal trend, with the highest ride count occurring during the summer, closely followed by the spring season. Conversely, the winter season exhibits the lowest ride count among the observed periods.
+- The total count of Cyclistic bike users surpasses the number of casual users by more than 1.5 million, as shown in the stacked bar chart. The chart reveals a seasonal trend, with the highest ride count occurring during the summer, closely followed by the spring season. The winter season exhibits the lowest ride count among the observed periods.
 - There seems to be a corelation between the number of rides and seasons.
-- During the week days, casual members tend to ride bikes specifically on Fridays, saturdays and Sundays. With saturday being the highest. While members tend to ride more on weekdays, with thursdays being the highest.
-- 
+- During the weekdays, casual members tend to ride bikes specifically on Fridays, saturdays and Sundays. With saturday being the highest. While members tend to ride more on weekdays, with thursdays being the highest.
+- Classic bikes tops the list of most preffered bikes.
+- Casual rides happen to be the only users that ride docked bikes
+- On average, docked bikes had a longer ride time as compared to classic and electric bikes.
+
+### Recommendations
+- Since Casual members tend to ride more on weekends, introduce exclusive promos for weekend rides that can only be accessed by register members in order to encourage casual riders to purchase membership.
+- Develop a mileage tracking system for riders with special incentives exclusively available to members who surpass designated mileage thresholds
+- For a temporary duration, establish a pricing tier that offers reduced rates for extended usage of docked bikes, specifically tailored for registered members. This initiative aims to reflect the observed trend where casual members tend to use docked bikes for longer durations compared to classic and electric bikes.
