@@ -311,6 +311,6 @@ ORDER BY 5 DESC;
 - On average, docked bikes had a longer ride time as compared to classic and electric bikes.
 
 ### Recommendations
-- Since Casual members tend to ride more on weekends, introduce exclusive promos for weekend rides that can only be accessed by register members in order to encourage casual riders to purchase membership.
+- Since casual members tend to ride more on weekends, introduce exclusive promos for weekend rides that can only be accessed by registered members in order to encourage casual riders to purchase membership.
 - Develop a mileage tracking system for riders with special incentives exclusively available to members who surpass designated mileage thresholds
 - For a temporary duration, establish a pricing tier that offers reduced rates for extended usage of docked bikes, specifically tailored for registered members. This initiative aims to reflect the observed trend where casual members tend to use docked bikes for longer durations compared to classic and electric bikes.
