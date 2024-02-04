@@ -302,7 +302,7 @@ ORDER BY 5 DESC;
 ## Act
 ### Fingings
 
-#### Summary of Analysis
+### Summary of Analysis
 - The total count of Cyclistic bike users surpasses the number of casual users by more than 1.5 million, as shown in the stacked bar chart. The chart reveals a seasonal trend, with the highest ride count occurring during the summer, closely followed by the spring season. The winter season exhibits the lowest ride count among the observed periods.
 - There seems to be a corelation between the number of rides and seasons.
 - During the weekdays, casual members tend to ride bikes specifically on Fridays, saturdays and Sundays. With saturday being the highest. While members tend to ride more on weekdays, with thursdays being the highest.
